@@ -1,7 +1,11 @@
 package Q2_06_Palindrome;
 
 import CtCILibrary.LinkedListNode;
-
+/**
+ * Palindrome : Imeplement a function to check if a linked list is a palindrome.  
+ * @author changhun
+ *
+ */
 public class QuestionA {
 	public static boolean isPalindrome(LinkedListNode head) {
 		LinkedListNode reversed = reverseAndClone(head);

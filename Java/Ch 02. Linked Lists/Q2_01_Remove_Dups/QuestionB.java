@@ -2,6 +2,13 @@ package Q2_01_Remove_Dups;
 
 import CtCILibrary.LinkedListNode;
 
+/**
+ * Remove Dups : Write code to remove duplicates from an unsorted linked list.
+ * Follow up
+ * How would you solve this problem if a temporary buffer is not allowed. 
+ * @author changhun
+ *
+ */
 public class QuestionB {
 	public static void deleteDups(LinkedListNode head) {
 		LinkedListNode current = head;

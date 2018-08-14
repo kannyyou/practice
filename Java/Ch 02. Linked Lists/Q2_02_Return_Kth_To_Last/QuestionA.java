@@ -1,7 +1,12 @@
 package Q2_02_Return_Kth_To_Last;
 
 import CtCILibrary.*;
-
+/**
+ * Return Kth to last: Implement an algorithm to find the kth to last element of singly linked list.
+ * 
+ * @author changhun
+ *
+ */
 public class QuestionA {
 
 	public static int printKthToLast(LinkedListNode head, int k) {

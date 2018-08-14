@@ -1,7 +1,13 @@
 package Q3_01_Three_in_One;
 
 import CtCILibrary.AssortedMethods;
-
+/**
+ * Three in One :
+ * Describe how you could use a single array to implement three stacks.
+ * 
+ * @author changhun
+ *
+ */
 public class QuestionA {
 	public static void printStacks(FixedMultiStack stacks) {
 		System.out.println(AssortedMethods.arrayToString(stacks.getValues()));
