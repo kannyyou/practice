@@ -1,5 +1,13 @@
 package Q8_10_Paint_Fill;
 
+/**
+ * Paint Fill : Implement the “paint fill” function that one might see on many image editing programs. 
+ * That is a given a screen (represented by a two dimensional array of color), a point and a new color, 
+ * fill in the surrounding area until the color changes from the original color. 
+ * 
+ * @author changhun
+ *
+ */
 public class Question {
 
 	public enum Color {

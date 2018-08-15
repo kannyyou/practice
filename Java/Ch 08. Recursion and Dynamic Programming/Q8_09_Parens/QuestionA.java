@@ -3,6 +3,15 @@ package Q8_09_Parens;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Parens: Implement an algorithm to print all valid (i.e., properly opened and closed) 
+ * combinations of n pairs of parentheses. 
+ * Input 3 :
+ * Output : ((())),(()()), (())(), ()(()), ()()()
+
+ * @author changhun
+ *
+ */
 public class QuestionA {
 	public static String insertInside(String str, int leftIndex) {
 		String left = str.substring(0, leftIndex + 1);

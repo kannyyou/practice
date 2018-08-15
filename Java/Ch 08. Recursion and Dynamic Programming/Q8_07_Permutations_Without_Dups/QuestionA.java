@@ -2,6 +2,11 @@ package Q8_07_Permutations_Without_Dups;
 
 import java.util.*;
 
+/**
+ * Permutations without Dups : Write a method to compute all permutations of a string of unique characters.
+ * @author changhun
+ *
+ */
 public class QuestionA {
 
 	public static ArrayList<String> getPerms(String str) {

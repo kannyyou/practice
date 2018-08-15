@@ -3,6 +3,13 @@ package Q8_08_Permutations_With_Dups;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ *  Permutations with Dups: Write a method to compute all permutations of a string 
+ *  whose characters are not necessarily unique. The list of permutations should not have duplicates.
+ * 
+ * @author changhun
+ *
+ */
 public class Question {	
 	public static HashMap<Character, Integer> buildFreqTable(String s) {
 		HashMap<Character, Integer> map = new HashMap<Character, Integer>();

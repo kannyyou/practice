@@ -1,5 +1,13 @@
 package Q8_05_Recursive_Multiply;
 
+/**
+ * ecursive Multiply : Write a recursive function to multiply two positive integers 
+ * without using the * operator (or / operator). 
+ * You can use addition, subtraction and bit shifting, but you should minimize the number of those operations.
+ *
+ * @author changhun
+ *
+ */
 public class QuestionA {
 
 	public static int counter = 0;

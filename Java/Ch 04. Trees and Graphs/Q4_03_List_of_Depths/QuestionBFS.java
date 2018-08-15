@@ -6,6 +6,13 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+/**
+ * List of Depth : Given a binary tree, design an algorithm which creates a linked list all the nodes at depth
+ * (e.g., if you have a tree with depth D, you will have D linked lists).
+ * 
+ * @author changhun
+ *
+ */
 public class QuestionBFS {
 
 	public static ArrayList<LinkedList<TreeNode>> createLevelLinkedList(TreeNode root) {

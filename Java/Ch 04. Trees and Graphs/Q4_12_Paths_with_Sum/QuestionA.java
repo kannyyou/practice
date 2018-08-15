@@ -2,6 +2,16 @@ package Q4_12_Paths_with_Sum;
 
 import CtCILibrary.TreeNode;
 
+/**
+ *  Path with Sum: You are given a binary tree in which each node contains an integer value
+ *   (which might be positive and negative). Design an algorithm 
+ *   to count the number of paths that sum to a give value. 
+ *   The path does not need to start or end at the root or a leaf, 
+ *   but it must go downwards (traveling only from parent nodes to child nodes). 
+ *  
+ * @author changhun
+ *
+ */
 public class QuestionA {
 	
 	public static int countPathsWithSum(TreeNode root, int targetSum) {

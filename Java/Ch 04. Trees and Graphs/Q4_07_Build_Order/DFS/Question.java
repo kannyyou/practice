@@ -2,7 +2,16 @@ package Q4_07_Build_Order.DFS;
 
 import java.util.ArrayList;
 import java.util.Stack;
+/**
+ * Build Order:  topological sorting
+You are give a list of project ad a list of dependencies 
+(while is a list of pairs of project where the second project is dependent on the first project). 
+All of a project’s dependencies must be build before the project. Find a build order that will allow the projects to be build.
+If there is no valid build order, return an error.
 
+ * @author changhun
+ *
+ */
 public class Question {
 
 	/* Build the graph, adding the edge (a, b) if b is dependent on a. 
