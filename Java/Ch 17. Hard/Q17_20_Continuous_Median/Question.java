@@ -4,6 +4,11 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+/**
+ * Continuous median : Numbers are randomly generated and passed to a method. Write a program to find and maintain themedian value as new values are generated.
+ * @author changhun
+ *
+ */
 public class Question {
 	private static Comparator<Integer> maxHeapComparator;
 	private static Comparator<Integer> minHeapComparator;
@@ -25,11 +30,16 @@ public class Question {
 			if(randomNumber < maxHeap.peek()){
 				minHeap.offer(maxHeap.poll());
 				maxHeap.offer(randomNumber);
+
 			}
 			else {
 				minHeap.offer(randomNumber);
 			}
 		}
+		System.out.println(maxHeap.toString());
+
+		System.out.println(minHeap.toString());
+
 	}
 
 	public static double getMedian() {
@@ -79,10 +89,12 @@ public class Question {
 		maxHeap = new PriorityQueue<Integer>(arraySize - arraySize/2, maxHeapComparator);
 		minHeap = new PriorityQueue<Integer>(arraySize/2, minHeapComparator);
 		
-		for(int i = 0; i < arraySize; i++) {
-			int randomNumber = (int) (Math.random( ) * (range+1));
-			addNewNumberAndPrintMedian(randomNumber);
-		}
+		addNewNumberAndPrintMedian(5);
+		addNewNumberAndPrintMedian(3);
+		addNewNumberAndPrintMedian(2);
+		addNewNumberAndPrintMedian(1);
+		addNewNumberAndPrintMedian(1);
+
 	}
 
 }
