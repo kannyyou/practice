@@ -11,7 +11,7 @@ import java.util.PriorityQueue;
  */
 public class Question {
 	private static Comparator<Integer> maxHeapComparator;
-	private static Comparator<Integer> minHeapComparator;
+//	private static Comparator<Integer> minHeapComparator;
 	private static PriorityQueue<Integer> maxHeap;
 	private static PriorityQueue<Integer> minHeap;
 
@@ -85,9 +85,9 @@ public class Question {
 		int range = 7;
 
 		maxHeapComparator = new MaxHeapComparator();
-		minHeapComparator = new MinHeapComparator();
+//		minHeapComparator = new MinHeapComparator();
 		maxHeap = new PriorityQueue<Integer>(arraySize - arraySize/2, maxHeapComparator);
-		minHeap = new PriorityQueue<Integer>(arraySize/2, minHeapComparator);
+		minHeap = new PriorityQueue<Integer>(arraySize/2);
 		
 		addNewNumberAndPrintMedian(5);
 		addNewNumberAndPrintMedian(3);

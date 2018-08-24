@@ -36,11 +36,11 @@ public class BinarySearchMedian {
             } else if (pivotPos > k) {
             	largest = pivotPos - 1;
             } else {
-                System.out.println(pivotPos + " " + nums[pivotPos] + " " + Arrays.toString(nums));
+//                System.out.println(pivotPos + " " + nums[pivotPos] + " " + Arrays.toString(nums));
 
                 break;
             }
-            System.out.println(pivotPos + " " + nums[pivotPos] + " " + Arrays.toString(nums));
+//            System.out.println(pivotPos + " " + nums[pivotPos] + " " + Arrays.toString(nums));
         }
         
         if (nums.length % 2 == 0) {
@@ -57,12 +57,12 @@ public class BinarySearchMedian {
         int smallest = left, largest = right;
         int i = left + 1;	//or random
         int pivot = nums[left];
-        System.out.println(pivot);
+//        System.out.println(pivot);
         while (i <= largest) {
-        	System.out.println("num" + nums[i] + " " + pivot + " " + smallest + " " + largest);
+//        	System.out.println("num" + nums[i] + " " + pivot + " " + smallest + " " + largest);
             if (nums[i] < pivot) {
                 swap(nums, smallest, i);
-                System.out.println("swap smallest " + i);
+//                System.out.println("swap smallest " + i);
 
                 smallest++;
                 i++;
@@ -70,12 +70,12 @@ public class BinarySearchMedian {
             } else if (nums[i] > pivot) {
                 swap(nums, largest, i);
                 largest--;
-                System.out.println("swap largest " + i);
+//                System.out.println("swap largest " + i);
 
             } else {
                 i++;
             }
-            System.out.println("\t" + Arrays.toString(nums));
+//            System.out.println("\t" + Arrays.toString(nums));
 
         }
         return i - 1;

@@ -44,30 +44,37 @@ public class ConcatenateWords {
 	            }
 	        });
 	        
+            System.out.println(Arrays.toString(words));
+
 	        for (int i = 0; i < words.length; i++) {
 	            if (canForm(words[i], preWords)) {
 	                result.add(words[i]);
 	            }
 	            preWords.add(words[i]);
+	            
+//	            System.out.println(preWords);
 	        }
 	        
 	        return result;
 	    }
 		
 	    private static boolean canForm(String word, Set<String> dict) {
+	        System.out.println(word + " " + dict.toString());
+
 	        if (dict.isEmpty()) return false;
-		boolean[] dp = new boolean[word.length() + 1];
-		dp[0] = true;
-		for (int i = 1; i <= word.length(); i++) {
-		    for (int j = 0; j < i; j++) {
-			if (!dp[j]) continue;
-			if (dict.contains(word.substring(j, i))) {
-			    dp[i] = true;
-			    break;
-			}
-		    }
-		}
-		return dp[word.length()];
+	        boolean[] dp = new boolean[word.length() + 1];
+	        dp[0] = true;
+	        for (int i = 1; i <= word.length(); i++) {
+	        	for (int j = 0; j < i; j++) {
+	        		if (!dp[j]) continue;
+	        		if (dict.contains(word.substring(j, i))) {
+	        			dp[i] = true;
+	        			break;
+	        		}
+	        	}
+	        }
+	        System.out.println(Arrays.toString(dp));
+	        return dp[word.length()];
 	    }
 	    
 	    public static void main(String[] args) {

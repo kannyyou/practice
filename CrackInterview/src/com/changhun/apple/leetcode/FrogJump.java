@@ -89,9 +89,11 @@ public class FrogJump {
     }
     public static boolean can_CrossBF(int[] stones, int ind, int jumpsize) {
         for (int i = ind + 1; i < stones.length; i++) {
-            int gap = stones[i] - stones[ind];
-            if (gap >= jumpsize - 1 && gap <= jumpsize + 1) {
-                if (can_CrossBF(stones, i, gap)) {
+            int step = stones[i] - stones[ind];
+            
+            System.out.println(ind + " " + i + " " + step);
+            if (step >= jumpsize - 1 && step <= jumpsize + 1) {
+                if (can_CrossBF(stones, i, step)) {
                     return true;
                 }
             }
@@ -217,10 +219,14 @@ public class FrogJump {
 	 * value is a set containing the jumpsize which can lead to the current stone position. 
 	 * We start by making a hashmap whose keys are all the positions at which a stone is present 
 	 * and the values are all empty except position 0 whose value contains 0. 
+	 * 
 	 * Then, we start traversing the elements(positions) of the given stone array in sequential order. 
+	 * 
 	 * For the currentPosition, for every possible jumpsize in the value set, 
 	 * we check if currentPosition + newjumpsize exists in the map, 
+	 * 
 	 * where newjumpsize can be either jumpsize-1, jumpsize , jumpsize+1. 
+	 * 
 	 * If so, we append the corresponding value set with newjumpsize. 
 	 * We continue in the same manner. If at the end, the value set 
 	 * corresponding to the last position is non-empty, we conclude 
@@ -237,13 +243,17 @@ public class FrogJump {
         map.get(0).add(0);
         for (int i = 0; i < stones.length; i++) {
             for (int k : map.get(stones[i])) {
+            	System.out.println(stones[i] + " " + k);
                 for (int step = k - 1; step <= k + 1; step++) {
                     if (step > 0 && map.containsKey(stones[i] + step)) {
                         map.get(stones[i] + step).add(step);
+                    	System.out.println("\t " + (stones[i] + step) + " " + step);
+
                     }
                 }
             }
         }
+        System.out.println(map.toString());
         return map.get(stones[stones.length - 1]).size() > 0;
     }
     

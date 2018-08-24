@@ -1,15 +1,12 @@
 package com.changhun.apple.nested_iterator;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Queue;
 
 class NestedIteratorQueue<T> {
-    private int iterIndex = 0;
     private Queue<Iterator<T>> iterqueue;
     
     public NestedIteratorQueue(Queue<Iterator<T>> iterqueue) {
