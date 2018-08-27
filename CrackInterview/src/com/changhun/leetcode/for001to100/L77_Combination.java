@@ -19,17 +19,17 @@ Output:
  * @author changhun
  *
  */
-public class Combination_77 {
+public class L77_Combination {
     public static List<List<Integer>> combine(int n, int k) {
-    	System.out.println("comb " + n + " " + k);
+//    	System.out.println("comb " + n + " " + k);
     	if (k == n || k == 0) {
     		List<Integer> row = new LinkedList<>();
     		for (int i = 1; i <= k; ++i) {
-    			System.out.println("add row " + i + " when n=" + n + " k=" + k);
+//    			System.out.println("add row " + i + " when n=" + n + " k=" + k);
     			row.add(i);
     		}
-    		System.out.println("row " + row);
-            System.out.println("\tret 1 " + row);
+//    		System.out.println("row " + row);
+//            System.out.println("\tret 1 " + row);
 
     		return new LinkedList<>(Arrays.asList(row));
     	}
@@ -38,23 +38,23 @@ public class Combination_77 {
 
         List<List<Integer>> result = combine(n - 1, k - 1);
         for (List<Integer> row: result) {
-			System.out.println("add sub " + n + " when n=" + n + " k=" + k);
+//			System.out.println("add sub " + n + " when n=" + n + " k=" + k);
 
 			row.add(n);
         	
-    		System.out.println("sub " + row);
+//    		System.out.println("sub " + row);
 
         }
 
-        System.out.println(" call comb2 " + (n-1) + " " + k);
+//        System.out.println(" call comb2 " + (n-1) + " " + k);
         result.addAll(combine(n - 1, k));
         
-        System.out.println("\tret 2 " + result);
+//        System.out.println("\tret 2 " + result);
     	return result;
     }
 
     public static void main(String[] args) {
-    	List<List<Integer>> out = combine(3,2);
+    	List<List<Integer>> out = combine(4,2);
     	
     	for (List<Integer> i : out) {
     		System.out.println(i);

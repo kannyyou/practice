@@ -66,6 +66,6 @@ class PermuationSubset {
      int arr[] = {1, 2, 3, 4, 5};
      int r = 3;
      int n = arr.length;
-     printCombination(arr, n, r);
+     printCombination(arr, n, 2);
  }
 }
