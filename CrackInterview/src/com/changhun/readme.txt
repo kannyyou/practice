@@ -90,3 +90,14 @@ Intuit
 20. 1	Two Sum
 21	121	Best Time to Buy and Sell Stock
 
+
+PInterest
+1. 759	Employee Free Time
+2. 269	Alien Dictionary
+3. 460	LFU Cache
+4. 277	Find the Celebrity
+5. 224	Basic Calculator
+6. 36	Valid Sudoku
+7. 79	Word Search
+	
+
