@@ -14,6 +14,8 @@ Given nums = [2, 7, 11, 15], target = 9,
 
 Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
+
+LinkedIn
  * @author changhun
  *
  */
@@ -55,14 +57,15 @@ public class L1_TwoSum {
 		int[] ret = twoSum(nums, 0);
 		
 		for (int num : ret) {
-			System.out.println(num);
+			System.out.print(num + " ");
 
 		}
+		System.out.println();
 		
 		int[] rets = twoSumSet(nums, 0);
 		
 		for (int num : rets) {
-			System.out.println(num);
+			System.out.print(num + " ");
 
 		}
 				
