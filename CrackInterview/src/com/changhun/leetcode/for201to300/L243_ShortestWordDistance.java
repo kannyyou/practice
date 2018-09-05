@@ -21,6 +21,8 @@ You may assume that word1 does not equal to word2, and word1 and word2 are both 
 
 
 LinkedIn
+Easy
+
  * @author changhun
  *
  */
