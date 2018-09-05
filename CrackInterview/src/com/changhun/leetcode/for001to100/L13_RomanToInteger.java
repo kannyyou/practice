@@ -69,6 +69,10 @@ C, CC, CCC, CD, D, DC, DCC, DCCC, CM, M.
 2014 (MM+X+IV) = MMXIV 
 2018 MMXVIII.
 
+
+LinkedIn
+Easy
+
  * @author changhun
  *
  */

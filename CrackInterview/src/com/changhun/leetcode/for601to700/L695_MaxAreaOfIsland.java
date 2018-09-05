@@ -19,6 +19,10 @@ Given the above grid, return 6. Note the answer is not 11, because the island mu
 Example 2:
 [[0,0,0,0,0,0,0,0]]
 
+
+LinkedIn
+Easy
+
  * @author changhun
  *
  */
