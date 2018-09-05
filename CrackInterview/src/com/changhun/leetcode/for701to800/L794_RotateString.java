@@ -17,6 +17,11 @@ Output: true
 Example 2:
 Input: A = 'abcde', B = 'abced'
 Output: false
+
+
+LinkedIn
+Easy
+
  * @author changhun
  *
  */
