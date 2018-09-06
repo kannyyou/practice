@@ -44,7 +44,7 @@ Explanation: The number "-91283472332" is out of the range of a 32-bit signed in
  * @author changhun
  *
  */
-public class StringToInt_8 {
+public class L8_StringToInt {
 	//String to int
 	public static int atoi(String str) {
 		int index = 0;

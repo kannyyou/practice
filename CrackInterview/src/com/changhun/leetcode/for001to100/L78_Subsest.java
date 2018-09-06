@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Subsest_78 {
+public class L78_Subsest {
 	/*Given a set of distinct integers, nums, return all possible subsets.
 	Note: The solution set must not contain duplicate subsets.
 	For example,
