@@ -46,6 +46,9 @@ And here's the code
 
 Same as crack book 16.17
 
+LinkedIn
+Easy
+
 	 * @param A
 	 * @return
 	 */
