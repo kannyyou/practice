@@ -25,11 +25,11 @@ n is a 32-bit signed integer, within the range [−231, 231 − 1]
  *
  */
 public class L50_Pow {
-    public double myPow(double x, int n) {
+    public static double myPow(double x, int n) {
         long N = n;
         if (N < 0) {
             x = 1 / x;
-            N = -N;
+            N -= N;
         }
         double ans = 1;
         for (long i = 0; i < N; i++)
@@ -37,7 +37,7 @@ public class L50_Pow {
         return ans;
     }
     
-    private double fastPow(double x, long n) {
+    private static double fastPow(double x, long n) {
         if (n == 0) {
             return 1.0;
         }
@@ -48,7 +48,7 @@ public class L50_Pow {
             return half * half * x;
         }
     }
-    public double myPow2(double x, int n) {
+    public static double myPow2(double x, int n) {
         long N = n;
         if (N < 0) {
             x = 1 / x;
@@ -58,7 +58,7 @@ public class L50_Pow {
         return fastPow(x, N);
     }
     
-    public double myPow3(double x, int n) {
+    public static double myPow3(double x, int n) {
         long N = n;
         if (N < 0) {
             x = 1 / x;
@@ -74,4 +74,11 @@ public class L50_Pow {
         }
         return ans;
     }
+    
+    public static void main(String[] args) {
+		System.out.println(myPow(10.0,2));
+		System.out.println(myPow2(10.0,2));
+		System.out.println(myPow3(10.0,2));
+
+	}
 }

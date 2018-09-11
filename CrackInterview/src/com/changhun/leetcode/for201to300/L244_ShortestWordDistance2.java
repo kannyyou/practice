@@ -45,6 +45,7 @@ public class L244_ShortestWordDistance2 {
 	            map.put(w, list);
 	        }
             list.add(i);
+
 	    }
 	}
 	

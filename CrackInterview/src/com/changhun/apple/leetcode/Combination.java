@@ -53,7 +53,7 @@ public class Combination {
 		    
 	public static void main(String[] args) {
 		int [] nums = {1, 3, 4, 5};
-		ArrayList<ArrayList<Integer>> outList = combine(nums, 3);
+		ArrayList<ArrayList<Integer>> outList = combine(nums, 2);
 		    
 		System.out.println(outList.toString());
 		

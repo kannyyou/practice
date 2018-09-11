@@ -18,6 +18,7 @@ Input: s = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"
 Output: ["AAAAACCCCC", "CCCCCAAAAA"]
 
 LinkedIn
+Medium
 
  * 
  * @author changhun
@@ -25,17 +26,17 @@ LinkedIn
  */
 public class L187_RepeatedDNASeq {
 	public static List<String> findRepeatedDnaSequences(String s) {
-	    Set seen = new HashSet();
-	    Set repeated = new HashSet();
+	    Set<String> seen = new HashSet<>();
+	    Set<String> repeated = new HashSet<>();
 	    for (int i = 0; i + 9 < s.length(); i++) {
 	        String ten = s.substring(i, i + 10);
-	        System.out.println(ten);
+//	        System.out.println(ten);
 	        if (!seen.add(ten)) {
 	        	repeated.add(ten);
 	            
 	        }
 	    }
-	    return new ArrayList(repeated);
+	    return new ArrayList<String>(repeated);
 	}
 	
 	public static void main(String[] args) {

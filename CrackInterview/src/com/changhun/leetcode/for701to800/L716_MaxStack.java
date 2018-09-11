@@ -70,7 +70,12 @@ public class L716_MaxStack {
 	}
 	
 	public static class MaxStack extends Stack<ModeWithMax> {
-	    public void push(int value) {
+	    /**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public void push(int value) {
 	        int currentMax = super.isEmpty() ? value : peekMax();
 	        super.push(new ModeWithMax(value, currentMax > value ? currentMax : value));
 	    }

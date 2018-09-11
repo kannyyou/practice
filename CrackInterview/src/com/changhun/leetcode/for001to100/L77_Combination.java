@@ -1,5 +1,6 @@
 package com.changhun.leetcode.for001to100;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -16,48 +17,104 @@ Output:
   [1,3],
   [1,4],
 ]
+
+Apple
+
+Medium
  * @author changhun
  *
  */
 public class L77_Combination {
-    public static List<List<Integer>> combine(int n, int k) {
-//    	System.out.println("comb " + n + " " + k);
-    	if (k == n || k == 0) {
-    		List<Integer> row = new LinkedList<>();
-    		for (int i = 1; i <= k; ++i) {
-//    			System.out.println("add row " + i + " when n=" + n + " k=" + k);
-    			row.add(i);
-    		}
-//    		System.out.println("row " + row);
-//            System.out.println("\tret 1 " + row);
+	public static class Solution1 {
+	    public static List<List<Integer>> combine(int n, int k) {
+			List<List<Integer>> combs = new ArrayList<List<Integer>>();
+			combine(combs, new ArrayList<Integer>(), 1, n, k);
+			return combs;
+		}
+		public static void combine(List<List<Integer>> combs, List<Integer> comb, int start, int n, int k) {
+			if(k==0) {
+				System.out.println(comb.toString());
+				combs.add(new ArrayList<Integer>(comb));
+				return;
+			}
+			for(int i=start;i<=n;i++) {
+				comb.add(i);	// add current location k, 
+//				System.out.println("s = " + start + " i = " + i + " k = " + k);
+				combine(combs, comb, i+1, n, k-1);	// go to next location k-1
+//				System.out.println("remove");
+				comb.remove(comb.size()-1);	//remove current location to add next one.
+			}
+		}
+	}
+	
+	public static class Solution2 {
+	    public static List<List<Integer>> combine(int n, int k) {
+	    	if (k == n || k == 0) {
+	    		List<Integer> row = new LinkedList<>();
+	    		for (int i = 1; i <= k; ++i) {
+	    			row.add(i);
+	    		}
 
-    		return new LinkedList<>(Arrays.asList(row));
-    	}
-    	
-        System.out.println(" call comb1 " + (n-1) + " " + (k-1));
+	    		return new LinkedList<>(Arrays.asList(row));
+	    	}
+	    	
+//	        System.out.println(" call comb1 " + (n-1) + " " + (k-1));
 
-        List<List<Integer>> result = combine(n - 1, k - 1);
-        for (List<Integer> row: result) {
-//			System.out.println("add sub " + n + " when n=" + n + " k=" + k);
+	        List<List<Integer>> result = combine(n - 1, k - 1);
+	        for (List<Integer> row: result) {
+				row.add(n);       	
+	        }
 
-			row.add(n);
-        	
-//    		System.out.println("sub " + row);
+	        result.addAll(combine(n - 1, k));        
+	    	return result;
+	    }
+	}
 
-        }
+	
+	
 
-//        System.out.println(" call comb2 " + (n-1) + " " + k);
-        result.addAll(combine(n - 1, k));
-        
-//        System.out.println("\tret 2 " + result);
-    	return result;
-    }
-
+	
+	
+	
+	
+	
+//	public static class Solution3 {
+//	    public static List<List<Integer>> combine(int n, int k) {
+//	    	List<List<Integer>> combs = new ArrayList<List<Integer>>();
+//			combine(combs, new ArrayList<Integer>(), 1, n, k);
+//			return combs;
+//	    }
+//	    
+//	    /**
+//	     * 
+//	     * @param combs
+//	     * @param comb
+//	     * @param start
+//	     * @param n
+//	     * @param k
+//	     */
+//	    private static void combine(List<List<Integer>> combs, List<Integer> comb, int start, int n, int k) {
+//	    	if (k == 0) {
+//				combs.add(new ArrayList<Integer>(comb));
+//				return;
+//	    	}
+//	    	for (int i = start; i <= n; i++) {
+//	    		comb.add(i);//add current one
+//	    		combine(combs, comb, i+1, n, k-1);	//go to next location
+//				comb.remove(comb.size()-1);//to add next one.
+//	    	}
+//	    }
+//
+//	}
+	
     public static void main(String[] args) {
-    	List<List<Integer>> out = combine(4,2);
+    	List<List<Integer>> out1 = Solution1.combine(4,2);
+    	System.out.println(out1.toString());
+
+    	List<List<Integer>> out2 = Solution2.combine(4,2);
+    	System.out.println(out2.toString());
     	
-    	for (List<Integer> i : out) {
-    		System.out.println(i);
-    	}
+//    	List<List<Integer>> out3 = Solution3.combine(4,2);
+//    	System.out.println(out3.toString());
 	}
 }
