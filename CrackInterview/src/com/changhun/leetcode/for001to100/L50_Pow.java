@@ -21,6 +21,11 @@ Note:
 -100.0 < x < 100.0
 n is a 32-bit signed integer, within the range [−231, 231 − 1]
 
+google
+linkedIn
+
+medium
+
  * @author changhun
  *
  */
@@ -37,6 +42,12 @@ public class L50_Pow {
         return ans;
     }
     
+    /**
+     * O(log N)
+     * @param x
+     * @param n
+     * @return
+     */
     private static double fastPow(double x, long n) {
         if (n == 0) {
             return 1.0;
@@ -58,27 +69,64 @@ public class L50_Pow {
         return fastPow(x, N);
     }
     
+    /**
+     * O(log N)
+     * @param x
+     * @param n
+     * @return
+     */
     public static double myPow3(double x, int n) {
         long N = n;
         if (N < 0) {
             x = 1 / x;
             N = -N;
         }
+
         double ans = 1;
         double current_product = x;
-        for (long i = N; i > 0; i /= 2) {
-            if ((i % 2) == 1) {
+        for (long i = N; i > 0; i /= 2) {       	
+        	if ((i % 2) == 1) {
                 ans = ans * current_product;
+//            	System.out.println(i + " " + current_product + " " + ans);
+
             }
             current_product = current_product * current_product;
+//        	System.out.println(i + " *  " + current_product);
+//        	System.out.println(i + " cp = " + current_product + " ans = " + ans);
+
         }
         return ans;
     }
     
+    /**
+     * O(N)
+     * @param x
+     * @param n
+     * @return
+     */
+    public static double myPow4(double x, int n) {
+        int N = n;
+        if (N < 0) {
+            x = 1 / x;
+            N = -N;
+        }
+        
+        if (N == 0) 
+        	return 1;
+        if (N % 2 == 0) {
+            return myPow4(x, N/2) * myPow4(x, N/2);
+        } else {
+            return myPow4(x, N/2) * myPow4(x, N/2) * x;
+        }
+   }
+    
+    
     public static void main(String[] args) {
-		System.out.println(myPow(10.0,2));
-		System.out.println(myPow2(10.0,2));
-		System.out.println(myPow3(10.0,2));
+		System.out.println(myPow(2.0,10));
+		System.out.println(myPow2(2.0,10));
+		System.out.println(myPow3(2.0,-2));
+		System.out.println(myPow4(2.0,-2));
+
 
 	}
 }

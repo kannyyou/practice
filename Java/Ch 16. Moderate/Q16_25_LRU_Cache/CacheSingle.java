@@ -10,6 +10,12 @@ import java.util.HashMap;
  * When it is full, it should evict the least recently used item. 
  * You can assume the key are integers and the values are strings.
  * 
+ * 
+ * Apple
+ * Intuit
+ * LinkedIn
+ * Hard
+ * 
  * @author changhun
  *
  */

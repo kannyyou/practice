@@ -32,17 +32,17 @@ public class L131_PalindromePartitioning {
 	}
 	
 	private static void backtrack(List<List<String>> list, List<String> tempList, String s, int start) {
-		System.out.println("start=" + start);
+//		System.out.println("start=" + start);
 
 		if (start == s.length()) {//there is no way to go further.
 		      list.add(new ArrayList<>(tempList));
-		      System.out.println("add" + tempList.toString());
+//		      System.out.println("add" + tempList.toString());
 
 		} else {
 			for (int i = start; i < s.length(); i++) {
 				if (isPalindrome(s, start, i)) {
-					System.out.println("start=" + start + " i=" + i + " " + s.substring(start, i+1));
-					tempList.add(s.substring(start, i+1));
+//					System.out.println("start=" + start + " i=" + i + " " + s.substring(start, i+1));
+					tempList.add(s.substring(start, i + 1));
 		            backtrack(list, tempList, s, i + 1);
 		            tempList.remove(tempList.size() - 1);
 				}

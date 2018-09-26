@@ -21,6 +21,7 @@ Output:
 Apple
 
 Medium
+
  * @author changhun
  *
  */
@@ -33,7 +34,7 @@ public class L77_Combination {
 		}
 		public static void combine(List<List<Integer>> combs, List<Integer> comb, int start, int n, int k) {
 			if(k==0) {
-				System.out.println(comb.toString());
+//				System.out.println(comb.toString());
 				combs.add(new ArrayList<Integer>(comb));
 				return;
 			}

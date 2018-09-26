@@ -20,10 +20,13 @@ Explanation: The square root of 8 is 2.82842..., and since
          
 LinkedIn 
 Easy
+
  * @author changhun
  *
  */
 public class L69_Sqrt {
+	
+	// choose here
     public static int mySqrt(int x) {
         if (x == 0) {
         	return 0;
@@ -53,7 +56,7 @@ public class L69_Sqrt {
     	long r = x;
         while (r*r > x) {
         	r = (r + x/r) / 2;
-            System.out.println("\t" + r);
+//            System.out.println("\t" + r);
 
         }                 
         return (int) r;

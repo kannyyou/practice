@@ -58,6 +58,28 @@ public class L46_Permute_with_size {
 	 * @param args
 	 */
 	
+	public static class Solution1 {
+		public static List<List<Integer>> premute(int[] nums, int k) {
+			List<List<Integer>> list = new ArrayList<>();
+			backtrack(list, new ArrayList<>(), nums, 0, k, k);
+			return list;
+		}
+		
+		public static void backtrack(List<List<Integer>> list, List<Integer> tempList, int[] nums, int start, int k, int ck) {
+			if (tempList.size() == k) {
+				list.add(new ArrayList<>(tempList));
+			} else {
+				for (int i = start; i < nums.length; i++) {
+					if (tempList.contains(nums[i])) continue;
+					tempList.add(nums[i]);
+					backtrack(list, tempList, nums, i+1, k, ck-1);
+					tempList.remove(tempList.size()-1);
+				}
+			}
+		}
+	}
+	
+	
 	public static void main(String[] args) {
 		int [] nums = {1,2,3, 4};
 		System.out.println(permute(nums, 2).toString());

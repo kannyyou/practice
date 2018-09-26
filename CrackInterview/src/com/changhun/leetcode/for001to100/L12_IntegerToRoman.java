@@ -52,6 +52,7 @@ LinkedIn
 Intuit
 easy
 
+
  * @author changhun
  *
  */
@@ -63,11 +64,11 @@ public class L12_IntegerToRoman {
 	    
 	    for(int i=0;i<values.length;i++) {
 	        while(num >= values[i]) {
-	            System.out.print("\t" + num);
+//	            System.out.print("\t" + num);
 
 	        	num -= values[i];
 	        	
-	            System.out.println(" " + values[i] + " " + strs[i]);
+//	            System.out.println(" " + values[i] + " " + strs[i]);
 
 	            sb.append(strs[i]);
 	        }

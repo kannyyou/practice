@@ -36,6 +36,12 @@ public class L104_MaxDepthOfBTree {
 		TreeNode(int x) { val = x; }
 	}
 	
+	/**
+	 * worst O(V+E)
+	 * but possibly O(H) < O(V)
+	 * @param root
+	 * @return
+	 */
     public static int maxDepth(TreeNode root) {
         if (root==null) {
             return 0;

@@ -20,6 +20,7 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 Follow up:
 
 Coud you solve it without converting the integer to a string?
+å
  * @author changhun
  *
  */
@@ -35,9 +36,9 @@ public class L9_PalindromeNum {
 			q *= 10;
 			q += p%10;
 			p /= 10;		
-			
 		}
-		
+		System.out.println(p + " " + q);
+
 		return q == x/10 && p == x % 10;
 	}
 	

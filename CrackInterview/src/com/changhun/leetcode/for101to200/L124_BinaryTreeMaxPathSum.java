@@ -38,6 +38,10 @@ A recursive method maxPathDown(TreeNode node)
 (2) returns the maximum sum of the path that can be extended to input node's parent.
 Code:
 
+
+intuit 
+hard
+
  * @author changhun
  *
  */
@@ -66,10 +70,12 @@ public class L124_BinaryTreeMaxPathSum {
     }
     
     public static void main(String[] args) {
-    	TreeNode root = new TreeNode(1);
-    	root.left = new TreeNode(2);
-    	root.right = new TreeNode(3);
-    	
+    	TreeNode root = new TreeNode(-10);
+    	root.left = new TreeNode(9);
+    	root.right = new TreeNode(20);
+    	root.right.left = new TreeNode(15);
+    	root.right.right = new TreeNode(7);
+
     	System.out.println(maxPathSum(root));
     	
     	

@@ -107,12 +107,7 @@ public class L13_RomanToInteger {
             
 
             if(cur < nex){
-                res -= cur;
-
-                System.out.println("cur " + cur + " " + s.charAt((i)));
-                System.out.println("nex " + nex + " " + s.charAt((i+1)));
-
-                
+                res -= cur;             
             }else{
                 res += cur;
             }

@@ -14,6 +14,7 @@ A linked list can be reversed either iteratively or recursively. Could you imple
 Intuit
 easy
 
+
  * @author changhun
  *
  */
@@ -29,6 +30,16 @@ public class L206_ReverseLinkedList {
 		}
 	}
 	 
+	/**
+	 * using temp
+	 * temp = curr.next
+	 * curr.next = prev
+	 * prev = curr
+	 * curr = temp
+	 *  
+	 * @param head
+	 * @return
+	 */
 	public static ListNode reverseList(ListNode head) {
 		ListNode prev = null;
 		ListNode curr = head;

@@ -31,8 +31,9 @@ You do not necessarily need to follow this format, so please be creative and com
 Note: Do not use class member/global/static variables to store states. 
 Your serialize and deserialize algorithms should be stateless.
 
-LinkedIn 
-Med
+LinkedIn
+Intuit 
+Hard
  * @author changhun
  *
  */

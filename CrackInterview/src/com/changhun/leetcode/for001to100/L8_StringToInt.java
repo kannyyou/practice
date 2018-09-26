@@ -41,6 +41,7 @@ Input: "-91283472332"
 Output: -2147483648
 Explanation: The number "-91283472332" is out of the range of a 32-bit signed integer.
              Thefore INT_MIN (−231) is returned.
+             
  * @author changhun
  *
  */
@@ -77,6 +78,34 @@ public class L8_StringToInt {
 		return returnInt * sign;
 	}
 	
+	
+	public static int atoi2(String str) {
+		int index = 0;
+		int sign = 1;
+		int returnInt = 0;
+		
+		if (str.length() == 0 ) return 0;
+		
+		if (str.charAt(index) == '+' || str.charAt(index) == '-') {
+			sign = str.charAt(index) == '+' ? 1: -1;
+			index ++;
+		}
+		
+		while (index < str.length()) {
+			int digit = str.charAt(index) - '0';
+			if (digit < 0 || digit > 9) break; //in case that there is a space between number, stop
+			
+			if (Integer.MAX_VALUE/10 < returnInt 
+					|| Integer.MAX_VALUE/10 == returnInt 
+					&& Integer.MAX_VALUE % 10 < digit) {
+				return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+			
+			}
+			returnInt = 10 * returnInt + digit;
+			index ++;
+		}
+		return returnInt * sign;
+	}
 	public static int myAtoi(String str) {
 	    int index = 0, sign = 1, total = 0;
 	    //1. Empty string

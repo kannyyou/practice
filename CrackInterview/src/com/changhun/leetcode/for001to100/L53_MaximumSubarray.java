@@ -79,10 +79,28 @@ Easy
 	    return max;
 	}
 	
+	public static int maxSubArray3(int[] a) {
+		int max = Integer.MIN_VALUE;
+		int sum = 0;
+		for (int num: a) {
+			if (sum < 0) 
+				sum = num;
+			else
+				sum += num;
+			
+			if (sum > max)
+				max = sum;
+			
+		}
+		
+		return max;
+	}
+	
 	public static void main(String[] args) {
 		int [] a = {-2,1,-3,4,-1,2,1,-5,4};
 		System.out.println(maxSubArray(a));
 		System.out.println(maxSubArray2(a));
+		System.out.println(maxSubArray3(a));
 
 		
 	}

@@ -19,14 +19,22 @@ LinkedIn
 pinterest
 Intuit
 
+
 easy
 
  * @author changhun
  *
  */
 public class L1_TwoSum {
+	/**
+	 * Utilize hash map : key : complement (target - value). value : index of value
+	 * @param nums
+	 * @param target
+	 * @return
+	 */
+	
 	public static int[] twoSum(int[] nums, int target) {
-	    Map<Integer, Integer> map = new HashMap<>();
+	    Map<Integer, Integer> map = new HashMap<>();	//key os complement (target - val) and value is index of val.
 	    for (int i = 0; i < nums.length; i++) {
 	        int complement = target - nums[i];
 	        if (map.containsKey(complement)) {
@@ -37,6 +45,12 @@ public class L1_TwoSum {
 	    throw new IllegalArgumentException("No two sum solution");
 	}
 	
+	/**
+	 * utilize hashset : to contain complement. 
+	 * @param nums
+	 * @param target
+	 * @return
+	 */
 	public static int[] twoSumSet(int[] nums, int target) {
 		HashSet<Integer> set = new HashSet<Integer>();
 		

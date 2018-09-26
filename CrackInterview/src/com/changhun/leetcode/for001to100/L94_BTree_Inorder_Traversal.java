@@ -17,6 +17,7 @@ Input: [1,null,2,3]
    3
 
 Output: [1,3,2]
+
 Follow up: Recursive solution is trivial, could you do it iteratively?
  * @author changhun
  *

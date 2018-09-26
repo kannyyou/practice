@@ -17,6 +17,8 @@ public class L78_Subsest {
   		[2,3],
   		[1,2],
   		[]
+  		
+  	
 	 */
 	
 	public static List<List<Integer>> subsets(int[] nums) {
@@ -58,13 +60,13 @@ public class L78_Subsest {
 	 */
 	private static void backtrack(List<List<Integer>> list , List<Integer> tempList, int [] nums, int start){
 		list.add(new ArrayList<>(tempList));
-		System.out.println(start + " set " + tempList.toString());
+//		System.out.println(start + " set " + tempList.toString());
 	    for(int i = start; i < nums.length; i++){
 	        tempList.add(nums[i]);	        
-	        System.out.println(start + " " + i + " add " + nums[i]);
+//	        System.out.println(start + " " + i + " add " + nums[i]);
 	        backtrack(list, tempList, nums, i + 1);
 	        tempList.remove(tempList.size() - 1);
-	        System.out.println(start + " " + i + " remove");
+//	        System.out.println(start + " " + i + " remove");
 	    }
 
 	}
