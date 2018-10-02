@@ -66,25 +66,6 @@ public class L297_Serialize_Deserialize_BTree {
 	            buildString(node.right,sb);
 	        }
 	    }
-	    
-	    public String serialize1(TreeNode root) {
-	    	StringBuilder sb = new StringBuilder();
-	    	buildString(root, sb);
-	    	return sb.toString();
-	    }
-	    
-	    private void buildString1(TreeNode node, StringBuilder sb) {
-	    	if (node == null) {
-	    		sb.append(NN).append(spliter);
-	    	} else {
-	    		sb.append(node.val).append(spliter);
-	    		buildString(node.left, sb);
-	    		buildString(node.right, sb);
-	    	}
-	    }
-	    
-	    
-	    
 	    // Decodes your encoded data to tree.
 	    public TreeNode deserialize(String data) {
 	        Deque<String> nodes = new LinkedList<>();
@@ -102,24 +83,5 @@ public class L297_Serialize_Deserialize_BTree {
 	            return node;
 	        }
 	    }
-	    
-	    public TreeNode deserialize1(String data) {
-	    	Deque<String> nodes = new LinkedList<>();
-	    	nodes.addAll(Arrays.asList(data.split(spliter)));
-	    	return buildTree1(nodes);
-	    }
-	    
-	    private TreeNode buildTree1(Deque<String> nodes) {
-	    	String val = nodes.remove();
-	    	if (val.equals(NN)) return null;
-	    	else {
-	    		TreeNode node = new TreeNode(Integer.valueOf(val));
-	    		node.left = buildTree1(nodes);
-	    		node.right = buildTree1(nodes);
-	    		return node;
-	    	}
-	    }
-	    
-	    
 	}
 }

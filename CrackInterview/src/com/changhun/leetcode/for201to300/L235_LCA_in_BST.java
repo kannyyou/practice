@@ -1,7 +1,7 @@
 package com.changhun.leetcode.for201to300;
 
-import com.changhun.leetcode.for101to200.L101_SymmetricTree.Solution1;
-import com.changhun.leetcode.for101to200.L101_SymmetricTree.TreeNode;
+import com.changhun.z.tree.L101_SymmetricTree.Solution1;
+import com.changhun.z.tree.L101_SymmetricTree.TreeNode;
 
 /**
 Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.

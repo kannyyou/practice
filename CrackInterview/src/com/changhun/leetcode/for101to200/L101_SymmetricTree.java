@@ -3,8 +3,6 @@ package com.changhun.leetcode.for101to200;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import com.changhun.leetcode.for001to100.L100_SameTree.TreeNode;
-
 /**
 Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
 

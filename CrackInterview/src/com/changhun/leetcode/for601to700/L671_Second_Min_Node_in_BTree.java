@@ -3,7 +3,7 @@ package com.changhun.leetcode.for601to700;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.changhun.leetcode.for001to100.L100_SameTree.TreeNode;
+import com.changhun.z.tree.L100_SameTree.TreeNode;
 
 /**
  * 

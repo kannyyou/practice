@@ -38,7 +38,7 @@ public class L77_Combination {
 				combs.add(new ArrayList<Integer>(comb));
 				return;
 			}
-			for(int i=start; i<=n; i++) {
+			for(int i=start;i<=n;i++) {
 				comb.add(i);	// add current location k, 
 //				System.out.println("s = " + start + " i = " + i + " k = " + k);
 				combine(combs, comb, i+1, n, k-1);	// go to next location k-1
@@ -47,10 +47,6 @@ public class L77_Combination {
 			}
 		}
 	}
-	
-	
-	
-	
 	
 	public static class Solution2 {
 	    public static List<List<Integer>> combine(int n, int k) {
@@ -75,28 +71,42 @@ public class L77_Combination {
 	    }
 	}
 
-	public static class Solution3 {
-	    public static List<List<Integer>> combine(int n, int k) {
-			List<List<Integer>> combs = new ArrayList<>();
-			combine(combs, new ArrayList<>(), 1, n, k);
-			return combs;
-			
-	    }
-	    
-	    private static void combine(List<List<Integer>> combs, List<Integer> comb, int start, int n, int k) {
-	    	if (k == 0) {
-	    		combs.add(new ArrayList<Integer>(comb));
-	    	} else {
-	    		for (int i = start; i <= n; i++) {
-	    			comb.add(i);
-	    			combine(combs, comb, i+1, n, k-1);	
-	    			comb.remove(comb.size() - 1);
-	    		}
-	    	}
-	    }
-	}
+	
+	
 
-
+	
+	
+	
+	
+	
+//	public static class Solution3 {
+//	    public static List<List<Integer>> combine(int n, int k) {
+//	    	List<List<Integer>> combs = new ArrayList<List<Integer>>();
+//			combine(combs, new ArrayList<Integer>(), 1, n, k);
+//			return combs;
+//	    }
+//	    
+//	    /**
+//	     * 
+//	     * @param combs
+//	     * @param comb
+//	     * @param start
+//	     * @param n
+//	     * @param k
+//	     */
+//	    private static void combine(List<List<Integer>> combs, List<Integer> comb, int start, int n, int k) {
+//	    	if (k == 0) {
+//				combs.add(new ArrayList<Integer>(comb));
+//				return;
+//	    	}
+//	    	for (int i = start; i <= n; i++) {
+//	    		comb.add(i);//add current one
+//	    		combine(combs, comb, i+1, n, k-1);	//go to next location
+//				comb.remove(comb.size()-1);//to add next one.
+//	    	}
+//	    }
+//
+//	}
 	
     public static void main(String[] args) {
     	List<List<Integer>> out1 = Solution1.combine(4,2);
@@ -105,7 +115,7 @@ public class L77_Combination {
     	List<List<Integer>> out2 = Solution2.combine(4,2);
     	System.out.println(out2.toString());
     	
-    	List<List<Integer>> out3 = Solution3.combine(4,2);
-    	System.out.println(out3.toString());
+//    	List<List<Integer>> out3 = Solution3.combine(4,2);
+//    	System.out.println(out3.toString());
 	}
 }

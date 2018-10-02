@@ -79,20 +79,20 @@ Easy
 	    return max;
 	}
 	
-	public static int maxSubArray3(int[] nums) {
+	public static int maxSubArray3(int[] a) {
 		int max = Integer.MIN_VALUE;
 		int sum = 0;
-		
-		for (int i=0; i< nums.length; i++) {
-			if (sum < 0) {
-				sum = nums[i];	//reset
-			} else {
-				sum += nums[i];
-				if (sum > max) {
-					max = sum;
-				}
-			}			
+		for (int num: a) {
+			if (sum < 0) 
+				sum = num;
+			else
+				sum += num;
+			
+			if (sum > max)
+				max = sum;
+			
 		}
+		
 		return max;
 	}
 	

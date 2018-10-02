@@ -54,11 +54,7 @@ public class L40_CombinationSum2 {
 			list.add(new ArrayList<>(tempList));
 		} else{
 			for(int i = start; i < nums.length; i++){ 
-	            if(i > start && nums[i] == nums[i-1]) {
-//	            	System.out.println("\tNO :" + tempList.toString() + " " + i + " " + start + " " + nums[i] + " " + nums[i-1])  ;
-	            	continue; // skip duplicates, check by index, when it tries to add same value in same index again.
-	            }
-//	            if (tempList.contains(nums[i])) continue;		// We can't use this.. it check value, not index.
+	            if(i > start && nums[i] == nums[i-1]) continue; // skip duplicates
 //				System.out.println(i);
 				tempList.add(nums[i]);	//add each element
 //				System.out.println(tempList);
@@ -76,7 +72,7 @@ public class L40_CombinationSum2 {
     	List<List<Integer>> out1 = combinationSum(nums, 8);
     	System.out.println(out1.toString());
 
-    	int [] nums2 = {2,5,2,2,1};
+    	int [] nums2 = {2,5,2,1,2};
     	List<List<Integer>> out2 = combinationSum(nums2, 5);
     	System.out.println(out2.toString());
 
