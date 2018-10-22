@@ -15,6 +15,9 @@ import java.util.List;
  * 
  * Determine if the array can reach the end
  * 
+ * L55 JumpGame
+ * L45 JumpGame2
+ * 
  * @author changhun
  *
  */
