@@ -25,6 +25,14 @@ public class L83_RemoveDuplicatesFromSortedList2 {
 		int val;
 		ListNode next;
 		ListNode(int x) { val = x; }
+		
+		 public String toString() {
+			 if (next != null) {
+				 return val + "->" + next.toString();
+			 } else {
+				 return ((Integer) val).toString();
+			 }		
+		 }
 	}
 	
 	public static class Solution1 {
