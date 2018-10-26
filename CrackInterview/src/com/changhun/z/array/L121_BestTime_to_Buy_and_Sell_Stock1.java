@@ -83,10 +83,8 @@ In formal terms, we need to find max(prices[j]−prices[i]), for every i and j s
 			int minPrice = Integer.MAX_VALUE;
 			int maxProfit = 0;
 			for (int i = 0; i < prices.length; i++) {
-				if (prices[i] < minPrice) 
-					minPrice = prices[i];
-				else if (prices[i] - minPrice > maxProfit)
-					maxProfit = prices[i] - minPrice;
+				maxProfit = Math.max(maxProfit, prices[i] - minPrice);
+				minPrice = Math.min(minPrice, prices[i]);
 			}
 			return maxProfit;
 		}
@@ -99,8 +97,11 @@ In formal terms, we need to find max(prices[j]−prices[i]), for every i and j s
 				
 		System.out.println(Solution1.maxProfit(price1));
 		System.out.println(Solution2.maxProfit(price1));
+		System.out.println(Solution3.maxProfit(price1));
 
 		System.out.println(Solution1.maxProfit(price2));
 		System.out.println(Solution2.maxProfit(price2));
+		System.out.println(Solution3.maxProfit(price2));
+
 	}
 }
