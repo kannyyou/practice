@@ -1,6 +1,6 @@
 package com.changhun.z.string;
 
-public class EPI6_Palindromic {
+public class EPI_6_1_Palindromic {
 	/**
 	 * time O(n)
 	 * space O(1)

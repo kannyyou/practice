@@ -24,6 +24,8 @@ Intuit
 easy
 
  * @author changhun
+ * 
+ *  * 2019/07/09
  *
  */
 public class L1_TwoSum {
@@ -39,7 +41,7 @@ public class L1_TwoSum {
 	    for (int i = 0; i < nums.length; i++) {
 	        int complement = target - nums[i];
 	        if (map.containsKey(complement)) {
-	            return new int[] { map.get(complement), nums[i] };
+	            return new int[] { map.get(complement), i };
 	        }
 	        map.put(nums[i], i);
 	    }
@@ -86,10 +88,11 @@ public class L1_TwoSum {
 	}
 	
 	public static void main(String[] args) {
-		int[] nums = new int[] {0, 1, 3, 5, -1, -2, -3};
+//		int[] nums = new int[] {0, 1, 3, 5, -1, -2, -3};
+		int[] nums = new int[] {2, 7, 11, 15};
+
 		
-		
-		int[] ret = twoSum(nums, 0);
+		int[] ret = twoSum(nums, 9);
 		
 		for (int num : ret) {
 			System.out.print(num + " ");
@@ -97,7 +100,7 @@ public class L1_TwoSum {
 		}
 		System.out.println();
 		
-		int[] rets = twoSumSet(nums, 0);
+		int[] rets = twoSumSet(nums, 9);
 		
 		for (int num : rets) {
 			System.out.print(num + " ");

@@ -1,6 +1,6 @@
 package com.changhun.z.string;
 
-public class EPI_6_IntToString {
+public class EPI_6_1_IntToString {
 	public static String intToString(int x) {
 		boolean isNegative = false;
 		if (x < 0) {
