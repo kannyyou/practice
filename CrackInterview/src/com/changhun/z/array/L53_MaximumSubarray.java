@@ -60,6 +60,7 @@ Easy
         
         for(int i = 1; i < n; i++){
             dp[i] = A[i] + (dp[i - 1] > 0 ? dp[i - 1] : 0);
+            System.out.println(i + " " + A[i] + " " + dp[i]);
             max = Math.max(max, dp[i]);
         }
         
