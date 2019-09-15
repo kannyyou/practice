@@ -51,37 +51,63 @@ public class L297_Serialize_Deserialize_BTree {
 	    private static final String NN = "X";
 
 	    // Encodes a tree to a single string.
-	    public String serialize(TreeNode root) {
+	    public static String serialize(TreeNode root) {
 	        StringBuilder sb = new StringBuilder();
 	        buildString(root, sb);
 	        return sb.toString();
 	    }
 
-	    private void buildString(TreeNode node, StringBuilder sb) {
+	    private static void buildString(TreeNode node, StringBuilder sb) {
 	        if (node == null) {
 	            sb.append(NN).append(spliter);
 	        } else {
+	            System.out.println(node.val);
+
 	            sb.append(node.val).append(spliter);
 	            buildString(node.left, sb);
 	            buildString(node.right,sb);
 	        }
 	    }
 	    // Decodes your encoded data to tree.
-	    public TreeNode deserialize(String data) {
+	    public static TreeNode deserialize(String data) {
 	        Deque<String> nodes = new LinkedList<>();
 	        nodes.addAll(Arrays.asList(data.split(spliter)));
 	        return buildTree(nodes);
 	    }
 	    
-	    private TreeNode buildTree(Deque<String> nodes) {
+	    private static TreeNode buildTree(Deque<String> nodes) {
 	        String val = nodes.remove();
 	        if (val.equals(NN)) return null;
 	        else {
+	        	
+	            System.out.println(val);
+
 	            TreeNode node = new TreeNode(Integer.valueOf(val));
 	            node.left = buildTree(nodes);
 	            node.right = buildTree(nodes);
 	            return node;
 	        }
 	    }
+	}
+	
+	public static void main(String[] args) {
+		TreeNode n = new TreeNode(1);
+		n.left = new TreeNode(2);
+		n.right = new TreeNode(3);
+		n.left.left = new TreeNode(-4);
+		n.left.right = new TreeNode(-5);
+		
+		n.right.left = new TreeNode(4);
+		n.right.right = new TreeNode(5);
+		
+		String d = Codec1.serialize(n);
+		System.out.println(d);
+		TreeNode f = Codec1.deserialize(d);
+		
+		System.out.println(f.val);
+		System.out.println(f.left.val);
+		System.out.println(f.right.val);
+
+		
 	}
 }

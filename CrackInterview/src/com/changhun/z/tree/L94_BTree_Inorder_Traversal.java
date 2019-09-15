@@ -88,6 +88,19 @@ public class L94_BTree_Inorder_Traversal {
 	    }
 	}
 	
+	// recursive
+	public class Solution3 {
+	    public List<Integer> ineorderTraversal(TreeNode root) {
+	        List<Integer> result = new ArrayList<Integer>();
+	        if (root != null){
+	            result.addAll(ineorderTraversal(root.left));
+	            result.add(root.val);
+	            result.addAll(ineorderTraversal(root.right));
+	        }
+	        return result;
+	    }
+	}
+	
 	public static void main(String[] args) {
 		
 		TreeNode n1 = new TreeNode(1);
