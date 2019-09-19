@@ -9,7 +9,35 @@ import com.changhun.z.tree.L102_BTree_LeveOrder_Traversal.Solution;
 import com.changhun.z.tree.L102_BTree_LeveOrder_Traversal.Solution1;
 import com.changhun.z.tree.L102_BTree_LeveOrder_Traversal.TreeNode;
 
-public class BinaryTreeLevelOrderTraversal {
+/**
+ * Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
+
+For example:
+Given binary tree [3,9,20,null,null,15,7],
+    3
+   / \
+  9  20
+    /  \
+   15   7
+return its level order traversal as:
+[
+  [3],
+  [9,20],
+  [15,7]
+]
+
+****
+ Breadth First Search (BFS)
+We scan through the tree level by level, following the order of height, from top to bottom. 
+The nodes on higher level would be visited before the ones with lower levels.
+
+
+
+ * 
+ * @author changhun
+ *
+ */
+public class L102_BinaryTreeLevelOrderTraversal {
 	public static class TreeNode {
 		int val;
 		TreeNode left;
@@ -19,6 +47,27 @@ public class BinaryTreeLevelOrderTraversal {
 		}
 	}
 	
+	/**
+	 * Recursive 
+	 * 
+	 * The simplest way to solve the problem is to use a recursion. 
+	 * Let's first ensure that the tree is not empty, and then call recursively the function helper(node, level), 
+	 * which takes the current node and its level as the arguments.
+
+This function does the following :
+
+The output list here is called levels, 
+and hence the current level is just a length of this list len(levels). 
+Compare the number of a current level len(levels) with a node level level. 
+If you're still on the previous level - add the new one by adding a new list into levels.
+
+Append the node value to the last list in levels.
+
+Process recursively child nodes if they are not None : helper(node.left / node.right, level + 1).
+
+	 * @author changhun
+	 *
+	 */
 	public static class Solution1 {
 		public static List<List<Integer>> levels = new ArrayList<List<Integer>>();
 		
@@ -39,8 +88,14 @@ public class BinaryTreeLevelOrderTraversal {
 			if (node.right != null) helper(node.right, level+1);
 
 		}				
-		 
 	}
+	
+	
+	/**
+	 * 
+	 * @author changhun
+	 *
+	 */
 	
 	public static class Solution2 {
 		public static List<List<Integer>> levelOrder(TreeNode node) {

@@ -1,6 +1,5 @@
 package com.changhun.linkedin.tree;
 
-import com.changhun.linkedin.tree.BinaryTreeLevelOrderTraversal.TreeNode;
 
 /**
  * Given a binary tree where all the right nodes are either leaf nodes with a sibling 
@@ -44,7 +43,7 @@ The above binary tree is serialized as [1,2,3,#,#,4,#,#,5].
  * @author changhun
  *
  */
-public class BinaryTreeUpsideDown {
+public class L156_BinaryTreeUpsideDown {
 	public static class TreeNode {
 		int val;
 		TreeNode left;

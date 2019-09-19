@@ -1,4 +1,4 @@
-package com.changhun.z.tree;
+package com.changhun.linkedin.tree;
 
 import java.util.Deque;
 import java.util.LinkedList;
@@ -28,7 +28,7 @@ Easy
  * @author changhun
  *
  */
-public class L104_MaxDepthOfBTree {
+public class L104_MaximumDepthOfBinaryTree {
 	public static class TreeNode {
 		int val;
 		TreeNode left;

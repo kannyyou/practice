@@ -47,7 +47,7 @@ Explanation: The endWord "cog" is not in wordList, therefore no possible transfo
  * @author changhun
  *
  */
-public class WorldLadder {
+public class L127_WordLadder {
 	public static class Pair {
 		private String key;
 		private Integer value;
